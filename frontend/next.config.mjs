@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    output: 'standalone',
+    experimental: {
+        // This helps prevent build-time fetch errors
+        appDocumentPreloading: false,
+    },
+};
